@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delicious Bites Restaurant</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff;
+    color:#333;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    color:#fff;
+    font-size:28px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#ff9800;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ff9800;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+    position:relative;
+    color:white;
+    max-width:700px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#ff9800;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#ff7700;
+    transform:translateY(-3px);
+}
+
+/* SECTION */
+
+section{
+    padding:90px 10%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h2{
+    font-size:40px;
+    color:#ff7700;
+}
+
+/* MENU */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#ff7700;
+    font-size:22px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:20px;
+}
+
+.about h2{
+    font-size:40px;
+    color:#ff7700;
+    margin-bottom:20px;
+}
+
+.about p{
+    line-height:1.8;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#111;
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    color:#ff9800;
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+    background:#000;
+    color:#bbb;
+    text-align:center;
+    padding:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:15px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">Delicious<span>Bites</span></div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Experience The Taste of Happiness</h1>
+
+<p>Fresh Ingredients • Premium Taste • Warm Hospitality</p>
+
+<a href="#menu" class="btn">Explore Menu</a>
+
+</div>
+
+</section>
+
+<!-- MENU -->
+
+<section id="menu">
+
+<div class="title">
+<h2>Our Specials</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Classic Burger</h3>
+<p>Juicy grilled beef with fresh veggies and cheese.</p>
+<div class="price">$12</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Healthy Salad</h3>
+<p>Fresh vegetables with homemade dressing.</p>
+<div class="price">$10</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Italian Pizza</h3>
+<p>Stone baked pizza topped with mozzarella.</p>
+<div class="price">$18</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80">
+
+<div>
+
+<h2>About Us</h2>
+
+<p>
+At Delicious Bites, every dish is prepared with passion and premium ingredients.
+We believe food is more than a meal—it's an experience. Join us for unforgettable
+flavors, exceptional service, and a cozy atmosphere.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<h2>Visit Us</h2>
+
+<p>📍 123 Food Street, New York</p>
+
+<p>📞 +1 234 567 890</p>
+
+<p>📧 hello@deliciousbites.com</p>
+
+<p>Open Daily: 10:00 AM – 11:00 PM</p>
+
+</section>
+
+<footer>
+
+© 2026 Delicious Bites Restaurant. All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
